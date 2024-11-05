@@ -1,0 +1,84 @@
+/* Hero section styling */
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f2e2c9, #d9bfbf);
+  background-size: cover;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: 'DM Serif Display', serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Styles für Viewports > 1:1 (Breiter als hoch) */
+@media (min-aspect-ratio: 1/1) {
+  .hero-title {
+    font-size: 6vw; /* Übersetzung in vw für größere Geräte */
+    letter-spacing: 0.1em;
+    color: #8a2e2e;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInTitle 1.5s ease forwards;
+  }
+
+  .hero-subtitle {
+    font-size: 2vw; /* Übersetzung in vw */
+    letter-spacing: 0.3rem;
+    color: #6a737d;
+    margin: 0.5rem 0;
+    animation: fadeInSubtitle 2.5s ease forwards;
+  }
+
+  .hero-sub-subtitle {
+    font-size: 1.5vw; /* Übersetzung in vw */
+    letter-spacing: 0.25rem;
+    color: #6a737d;
+    margin: 0.5rem 0;
+    animation: fadeInSubtitle 2.5s ease forwards;
+  }
+}
+
+/* Styles für Viewports < 1:1 (Höher als breit) */
+@media (max-aspect-ratio: 1/1) {
+  .hero-title {
+    font-size: 9vh; /* Übersetzung in vh für kleinere Geräte */
+    letter-spacing: 0.1em;
+    color: #8a2e2e;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInTitle 1.5s ease forwards;
+  }
+
+  .hero-subtitle {
+    font-size: 2vh; /* Übersetzung in vh */
+    letter-spacing: 0.3rem;
+    color: #6a737d;
+    margin: 0.5rem 0;
+    animation: fadeInSubtitle 2.5s ease forwards;
+  }
+
+  .hero-sub-subtitle {
+    font-size: 1.7vh; /* Übersetzung in vh */
+    letter-spacing: 0.25rem;
+    color: #6a737d;
+    margin: 0.5rem 0;
+    animation: fadeInSubtitle 2.5s ease forwards;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInTitle {
+  0% { transform: translateY(-20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInSubtitle {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}

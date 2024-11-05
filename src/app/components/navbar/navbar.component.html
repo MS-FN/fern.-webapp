@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <div *ngIf="!isMenuOpen" (click)="toggleMenu()" class="hamburger" id="hamburger">☰</div>
+  <div *ngIf="isMenuOpen" (click)="toggleMenu()" class="vert_hamburger" id="vert_hamburger"></div>
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a href="#about">who is fern.?</a></li>
+    <li><a href="#vision">Vision</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#music">Music</a></li>
+  </ul>
+</nav>
